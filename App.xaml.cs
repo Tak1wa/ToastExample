@@ -42,13 +42,6 @@ namespace トースト通知のサンプル
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 
-#if DEBUG
-            if (System.Diagnostics.Debugger.IsAttached)
-            {
-                this.DebugSettings.EnableFrameRateCounter = true;
-            }
-#endif
-
             Frame rootFrame = Window.Current.Content as Frame;
 
             // ウィンドウに既にコンテンツが表示されている場合は、アプリケーションの初期化を繰り返さずに、
@@ -79,7 +72,7 @@ namespace トースト通知のサンプル
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
             }
             // 現在のウィンドウがアクティブであることを確認します
-            Window.Current.Activate();
+            Window.Current.Activate();    
         }
 
         /// <summary>
